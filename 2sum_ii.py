@@ -24,12 +24,6 @@ def two_sum(numbers, target):
     return []
 
 
-# Review of binary search:
-# - if high >= low, then target may still be in the array, otherwise return -1 bc it would be invalid
-# - find the midpoint of the array, floor division will round to 0 in the case of 1/2
-# - otherwise find if target is larger or smaller than the midpoint, and "throw that half away"
-#   by adjusting the high and low index. THE ARRAY MUST NOT BE MODIFIED.
-
 def binary_search(lst, target, low, high):
     if high >= low:
         mid = (high + low) // 2  # in cases of a list of len 1, floor division returns 0
