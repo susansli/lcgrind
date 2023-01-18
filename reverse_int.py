@@ -15,20 +15,17 @@ MAX = 2 ** 31 - 1
 
 
 def reverse(x):
-    x_abs = abs(x)
     reverse_int = 0
 
-    while x_abs != 0:
+    while x != 0:
         reverse_int *= 10
-        curr_dig = x_abs - ((x_abs // 10) * 10)
+        curr_dig = x - ((x // 10) * 10)
         reverse_int += curr_dig
-        x_abs = (x_abs - curr_dig) / 10
+        x = (x - curr_dig) / 10
 
     reverse_int = int(reverse_int)  # floor division turns the number into a float :(
 
     if reverse_int > MAX or reverse_int < MIN:
         return 0
-    if x < 0:
-        return -1 * reverse_int
     return reverse_int
 
