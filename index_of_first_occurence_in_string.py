@@ -17,9 +17,8 @@ def str_str(haystack, needle):
     # The easiest way to do this is just haystack.index(needle), however we will attempt to do this
     # problem with char matching instead.
 
-    # Looking at other solutions, maintaining a sliding window seems to be another solution. This
-    # has a worse time complexity since we have to char compare each character, whereas by storing
-    # char matches to travel to in a queue, we minimize the chars read (at the expense of space)
+    # Looking at other solutions, maintaining a SLIDING WINDOW seems to be another solution that's much
+    # cleaner and eliminates backtracking ://
 
     matches = []
     ptr_1 = 0
