@@ -1,6 +1,6 @@
 # lcgrind
 Getting good at LC :D
 
-** 01/25/2023 **
+** 04/21/2023 **
 
-![image](https://user-images.githubusercontent.com/65876219/214791622-3eac646e-a52a-49b0-9246-b8106d1ecdf8.png)
+![image](https://user-images.githubusercontent.com/65876219/233702472-9d96010f-dbe2-448e-ac8f-281192df3465.png)
