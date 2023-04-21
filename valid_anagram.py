@@ -7,7 +7,7 @@
 # s = "ab", t = "a" --> false
 
 # Initial approach is to create an array from all the characters in s, then loop
-# through t, removing the matching character in array s if it's included. We'd have to
+# through t, removing the matching character in array s if it's included.
 
 # We can also make a dictionary for faster access time than constantly popping from an array
 
