@@ -21,7 +21,7 @@ def group_anagrams(strs):
     str_dict = {}
     for word in strs:
         sorted_word = ''.join(sorted(word))
-        if sorted_word in str_dict.keys():
+        if sorted_word in str_dict:
             str_dict[sorted_word].append(word)
         else:
             str_dict[sorted_word] = [word]
