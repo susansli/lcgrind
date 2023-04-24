@@ -45,3 +45,32 @@ def product_except_self(nums):
             output[i] = output[i] // nums[i]
 
     return output
+
+
+# Admittedly this feels kind of cheap since I'm still doing division.
+# The optimal solution is with pre and postfix (neetcode solution):
+
+def product_except_self_prepost(nums):
+    # 1. Create an array of 1s the length of nums
+    output = [1 for _ in range(len(nums))]
+
+    # 2. initiate a value as product to be modified
+    product = 1
+
+    # 3. Loop through the nums array, multiplying product by each subsequent one
+    for i in range(len(nums)):
+        output[i] = product
+        product *= nums[i]
+
+    # 4. Reset product
+    product = 1
+
+    # Loop through the nums array in reverse, doing essentially the reverse of step 3 but
+    # multiplying each preceding value by the product
+    for i in range(len(nums) - 1, -1, -1):  # reverses range iterator
+        output[i] *= product
+        product *= nums[i]
+    return output
+
+
+print(product_except_self_prepost([1, 2, 3, 4]))
