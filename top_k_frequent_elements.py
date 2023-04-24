@@ -23,3 +23,33 @@ def top_k_frequent(nums, k):
             frequencies[num] = 1
     # list comp of first k keys after sorting frequencies by value
     return [k for k, v in sorted(frequencies.items(), key=lambda item: item[1], reverse=True)][:k]
+
+
+def top_k_freq_bucket_sort(nums, k):
+    # 1. Create a dictionary of frequencies (same as solution 1)
+    # 2. Create a 2D list to represent buckets of the bucket sort
+    # 3. Populate the buckets with the frequencies dictionary
+    # 4. Reverse the 2D list, appending values if they exist to a new list to return
+    # 5. Slice the list meant for return to the kth element
+    # This results in O(N) time at a space tradeoff
+
+    frequencies = {}
+    for num in nums:
+        if num in frequencies:
+            frequencies[num] += 1
+        else:
+            frequencies[num] = 1
+
+    buckets = [[] for _ in range(len(nums))]
+
+    for key, value in frequencies.items():
+        buckets[value].append(key)
+
+    output = []
+
+    for value in reversed(buckets):
+        # to merge lists, just += the lists together
+        output += value
+
+    return output[:k]
+
