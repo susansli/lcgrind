@@ -1,5 +1,5 @@
 # July 2021: when I discovered leetcode was hard ;__;
-# Really crazy how far you come in a few years...
+# Really crazy how far you come in a few years....
 
 def two_sum(nums, target):
     reference = {}
